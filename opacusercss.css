@@ -1,0 +1,245 @@
+/*
+ * Koha OPAC New Arrivals Scroller - styles.
+ * Append to the opacusercss system preference.
+ *
+ * Copyright (C) L2C2 Technologies
+ * Author: Indranil Das Gupta
+ * Licensed under the GNU General Public License v3.0 or later.
+ */
+
+/* === New Arrivals scroller === */
+.na-scroller {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-align: left;
+}
+.na-heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0F6E56;
+  margin: 0;
+  padding: 10px 12px;
+  border-bottom: 2px solid #0F6E56;
+  letter-spacing: 0.3px;
+  text-align: center;
+  background: #ffffff;
+}
+.na-heading .fas,
+.na-heading .fa-solid {
+  color: #0F6E56;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.na-viewport {
+  position: relative;
+  overflow: hidden;
+}
+.na-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 40px 20px;
+}
+.na-loading img {
+  max-width: 48px;
+  height: auto;
+}
+.na-loading.hidden {
+  display: none;
+}
+.na-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #777777;
+  font-size: 12px;
+  font-style: italic;
+}
+.na-scroller .na-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  will-change: transform;
+}
+.na-scroller .na-item {
+  position: relative;
+  padding: 12px;
+  border-bottom: 1px solid #edf0f3;
+}
+.na-scroller .na-item:nth-child(even) {
+  background: #f8f9fa;
+}
+.na-scroller .na-item:last-child {
+  border-bottom: 0;
+}
+.na-scroller .na-body {
+  display: flex;
+  margin-bottom: 10px;
+}
+.na-scroller .na-cover {
+  flex: 0 0 60px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.na-scroller .na-cover img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.na-scroller .na-noimage {
+  width: 60px;
+  height: 80px;
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  color: #979797;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+.na-scroller .na-meta {
+  flex: 1;
+  min-width: 0;
+}
+.na-scroller .na-title {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  color: #042C53;
+  text-decoration: none;
+  display: block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.na-scroller .na-title:hover {
+  text-decoration: underline;
+}
+.na-scroller .na-author {
+  font-style: italic;
+  font-size: 12px;
+  color: #555555;
+  display: block;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.na-scroller .na-subject {
+  font-size: 11px;
+  color: #777777;
+  display: block;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.na-scroller .na-subject .fas,
+.na-scroller .na-subject .fa-solid {
+  margin-right: 5px;
+  font-size: 10px;
+}
+.na-scroller .na-isbn {
+  font-size: 11px;
+  color: #777777;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.na-scroller .na-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px dashed #dddddd;
+}
+.na-scroller .na-date {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+}
+.na-scroller .na-actions {
+  display: flex;
+  gap: 6px;
+}
+.na-scroller .na-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: #666666;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  font-size: 11px;
+}
+.na-scroller .na-btn:hover:not(.disabled):not([disabled]) {
+  border-color: #0F6E56;
+  color: #0F6E56;
+  background: #E1F5EE;
+  text-decoration: none;
+}
+.na-scroller .na-btn.disabled,
+.na-scroller .na-btn[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.na-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.na-toast.show {
+  opacity: 1;
+}
+.na-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.na-nav-overlay img {
+  width: 64px;
+  height: auto;
+}
+.na-nav-overlay .na-nav-msg {
+  font-size: 14px;
+  color: #042C53;
+  font-weight: bold;
+}
