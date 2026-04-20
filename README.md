@@ -5,7 +5,7 @@ A self-contained auto-scrolling "New Arrivals" widget for the Koha ILS OPAC home
 ## Features
 
 - Auto-scrolling vertical list of new arrivals, pause on hover
-- Cover image fallback chain: Koha local cover → Amazon cover via ISBN-10 → styled placeholder
+- Cover image fallback chain: Koha local cover -> Amazon cover via ISBN-10 -> styled placeholder
 - ISBN-13 to ISBN-10 conversion for Amazon cover URLs
 - Robust `naturalHeight <= 1` detection to catch Koha and Amazon 1x1 placeholder sentinels
 - Per-row round action buttons for finding more by the same author, on the same subject, or sharing the record link
@@ -27,7 +27,7 @@ A self-contained auto-scrolling "New Arrivals" widget for the Koha ILS OPAC home
 
 ### 1. Create the SQL report
 
-Import `report.sql` into Koha via Reports → Create from SQL. Note the report ID assigned by Koha after saving.
+Import `report.sql` into Koha via Reports -> Create from SQL. Note the report ID assigned by Koha after saving.
 
 ### 2. Configure the JS
 
