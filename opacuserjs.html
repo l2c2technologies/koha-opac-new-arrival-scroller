@@ -1,0 +1,29 @@
+<!--
+  Koha OPAC New Arrivals Scroller - markup fragment.
+  Paste into the OpacMainUserBlock system preference, merging into the
+  existing homepage layout as appropriate.
+
+  Copyright (C) L2C2 Technologies
+  Author: Indranil Das Gupta
+  Licensed under the GNU General Public License v3.0 or later.
+-->
+<div class="container-fluid">
+  <div class="shadow p-3">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <div id="newArrivalsScroller" class="na-scroller">
+          <h3 class="na-heading"><i class="fa-solid fa-rss"></i>&nbsp;&nbsp;New Arrivals</h3>
+          <div class="na-viewport">
+            <div class="na-loading">
+              <img src="" alt="Loading new arrivals" class="na-loading-img" />
+            </div>
+            <ul class="na-track"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <!-- your homepage prose goes here -->
+      </div>
+    </div>
+  </div>
+</div>
