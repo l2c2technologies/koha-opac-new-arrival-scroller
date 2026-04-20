@@ -1,6 +1,6 @@
-# Koha OPAC New Arrivals Scroller
+# Koha OPAC new arrivals scroller
 
-A self-contained auto-scrolling "New Arrivals" widget for the Koha ILS OPAC homepage. Displays the most recently accessioned titles with covers, bibliographic details, per-record action buttons (find more by author, find more on subject, share link), and seamless vertical auto-scroll with pause-on-hover.
+A self-contained auto-scrolling "New Arrivals" widget for the Koha ILS OPAC homepage. Displays the most recently accessioned titles with covers, bibliographic details, per-record action buttons (find more by author, find more on subject, share link), and seamless vertical auto-scroll with pause on hover.
 
 ## Features
 
@@ -73,4 +73,4 @@ Author: Indranil Das Gupta
 
 Copyright: L2C2 Technologies
 
-License: GNU General Public License v3.0 or later. See `LICENSE` notice in each source file.
+License: GNU General Public License v3.0 or later. 
